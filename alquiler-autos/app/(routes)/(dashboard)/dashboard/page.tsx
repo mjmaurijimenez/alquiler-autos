@@ -1,7 +1,9 @@
 export default function DashboardPage() {
   return (
     <div>
-      <div>DashboardPege</div>
+      <div className="flex justify-between">
+        <h2 className="text-2xl font-bold">List of cars</h2>
+        </div>
     </div>
   )
 }
