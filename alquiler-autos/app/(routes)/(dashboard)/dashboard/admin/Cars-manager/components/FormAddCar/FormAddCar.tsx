@@ -23,7 +23,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+import { useState } from "react";
+
+
 export function FormAddCar() {
+  const [photoUploaded, setPhotoUploaded] = useState(false)
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -178,6 +182,19 @@ export function FormAddCar() {
                   </SelectContent>
                 </Select>
 
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+           <FormField
+            control={form.control}
+            name="photo"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Car Image</FormLabel>
+                <FormControl>
+                
+                </FormControl>
                 <FormMessage />
               </FormItem>
             )}
